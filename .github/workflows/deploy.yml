@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /domains/marabout-lissa.com/public_html
+          server-dir: /domains/marabout-lissa.com/public_html/
           protocol: ftp
           dangerous-clean-slate: true   # ⚠️ supprime tout sur le serveur avant upload
           exclude: |
