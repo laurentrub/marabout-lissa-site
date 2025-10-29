@@ -23,26 +23,21 @@ jobs:
           fi
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /domains/marabout-lissa.com/public_html/
-          local-dir: ./dist
-          protocol: ftp
-          passive: true
           port: 21
-
-          # ✅ Sécurisé et compatible Asura :
-          dangerous-clean-slate: false     # ne supprime plus tout avant d'envoyer
-          timeout: 60000                   # laisse plus de temps avant fermeture
-          retry: 3                         # réessaie 3 fois en cas de coupure
-          max-async-operations: 1          # envoie les fichiers un par un (évite le FIN packet)
+          protocol: ftp
+          local-dir: ./dist/                     # doit se terminer par un "/"
+          server-dir: /domains/marabout-lissa.com/public_html/
+          timeout: 60000                         # laisse plus de temps avant fermeture
+          dangerous-clean-slate: false            # ne supprime pas tout avant upload
           exclude: |
             **/.git*
             **/.github*
             **/README.md
             **/LICENSE
             **/node_modules/**
-          log-level: verbose               # log détaillé pour debug si besoin
+          log-level: minimal
