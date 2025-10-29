@@ -15,19 +15,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Build site (optional)
+        run: |
+          if [ -f package.json ]; then
+            npm install
+            npm run build || echo "No build step found, skipping..."
+          fi
+
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
           server-dir: /domains/marabout-lissa.com/public_html/
+          local-dir: ./dist
           protocol: ftp
-          dangerous-clean-slate: true   # ⚠️ supprime tout sur le serveur avant upload
+          passive: true
+          port: 21
+
+          # ✅ Sécurisé et compatible Asura :
+          dangerous-clean-slate: false     # ne supprime plus tout avant d'envoyer
+          timeout: 60000                   # laisse plus de temps avant fermeture
+          retry: 3                         # réessaie 3 fois en cas de coupure
+          max-async-operations: 1          # envoie les fichiers un par un (évite le FIN packet)
           exclude: |
-            .git*
-            .github*
-            README.md
-            LICENSE
-          log-level: minimal
+            **/.git*
+            **/.github*
+            **/README.md
+            **/LICENSE
+            **/node_modules/**
+          log-level: verbose               # log détaillé pour debug si besoin
