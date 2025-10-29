@@ -24,9 +24,9 @@ const MentionsLegales = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Éditeur du site</h2>
             <p className="text-muted-foreground leading-relaxed">
-              <strong>Nom :</strong> Maître Abdou<br />
+              <strong>Nom :</strong> Maître Amagnon Lissa<br />
               <strong>Activité :</strong> Marabout africain traditionnel - Consultant spirituel<br />
-              <strong>Email :</strong> maitre.abdou@spiritual.fr<br />
+              <strong>Email :</strong> maitre.Amagnon Lissa@spiritual.fr<br />
               <strong>Téléphone :</strong> +33 1 XX XX XX XX
             </p>
           </section>
@@ -56,7 +56,7 @@ const MentionsLegales = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Nature des services</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Les services proposés par Maître Abdou relèvent de la tradition spirituelle africaine ancestrale. 
+              Les services proposés par Maître Amagnon Lissa relèvent de la tradition spirituelle africaine ancestrale. 
               Ils sont basés sur des pratiques traditionnelles de conseil et d'accompagnement spirituel.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
@@ -69,7 +69,7 @@ const MentionsLegales = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Responsabilité</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Maître Abdou s'efforce d'assurer au mieux de ses possibilités, l'exactitude et la mise à jour 
+              Maître Amagnon Lissa s'efforce d'assurer au mieux de ses possibilités, l'exactitude et la mise à jour 
               des informations diffusées sur ce site. Toutefois, il ne peut garantir l'exactitude, la précision 
               ou l'exhaustivité des informations mises à disposition sur ce site.
             </p>
@@ -81,7 +81,7 @@ const MentionsLegales = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Liens hypertextes</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Le site peut contenir des liens hypertextes vers d'autres sites. Maître Abdou ne dispose d'aucun 
+              Le site peut contenir des liens hypertextes vers d'autres sites. Maître Amagnon Lissa ne dispose d'aucun 
               moyen pour contrôler les contenus de ces sites et n'assumera en conséquence aucune responsabilité 
               de ce fait.
             </p>

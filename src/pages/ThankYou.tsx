@@ -24,7 +24,7 @@ const ThankYou = () => {
                   Message Reçu !
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Votre demande a bien été envoyée à Maître Abdou
+                  Votre demande a bien été envoyée à Maître Amagnon Lissa
                 </p>
               </div>
 
@@ -33,7 +33,7 @@ const ThankYou = () => {
                   Que se passe-t-il maintenant ?
                 </p>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>✓ Votre message sera examiné personnellement par Maître Abdou</p>
+                  <p>✓ Votre message sera examiné personnellement par Maître Amagnon Lissa</p>
                   <p>✓ Vous recevrez une réponse dans les <strong className="text-golden-amber">24 heures</strong></p>
                   <p>✓ La première consultation est <strong className="text-golden-amber">totalement gratuite</strong></p>
                 </div>
@@ -51,7 +51,7 @@ const ThankYou = () => {
                   </div>
                   <div className="flex items-center gap-2 text-sunset-orange">
                     <Mail className="w-5 h-5" />
-                    <span className="font-semibold">maitre.abdou@spiritual.fr</span>
+                    <span className="font-semibold">contact@marabout-lissa.com</span>
                   </div>
                 </div>
 
@@ -69,7 +69,7 @@ const ThankYou = () => {
                 <p className="text-sm text-muted-foreground italic">
                   "La patience est la clé de toute solution. Je suis là pour vous accompagner avec bienveillance."
                 </p>
-                <p className="text-sm text-golden-amber font-semibold mt-2">- Maître Abdou</p>
+                <p className="text-sm text-golden-amber font-semibold mt-2">- Maître Amagnon Lissa</p>
               </div>
             </CardContent>
           </Card>

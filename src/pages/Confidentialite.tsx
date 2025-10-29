@@ -24,7 +24,7 @@ const Confidentialite = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Protection de vos données personnelles</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Maître Abdou accorde la plus grande importance à la protection de vos données personnelles et au 
+              Maître Amagnon Lissa accorde la plus grande importance à la protection de vos données personnelles et au 
               respect de votre vie privée. Cette politique de confidentialité vous informe sur la manière dont 
               vos données sont collectées, utilisées et protégées.
             </p>
@@ -96,7 +96,7 @@ const Confidentialite = () => {
               <li><strong>Droit à la portabilité :</strong> Vous pouvez récupérer vos données dans un format structuré</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Pour exercer ces droits, contactez-nous par email à : <strong>maitre.abdou@spiritual.fr</strong>
+              Pour exercer ces droits, contactez-nous par email à : <strong>maitre.Amagnon Lissa@spiritual.fr</strong>
             </p>
           </section>
 
@@ -126,7 +126,7 @@ const Confidentialite = () => {
               vous pouvez nous contacter :
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Email : maitre.abdou@spiritual.fr<br />
+              Email : maitre.Amagnon Lissa@spiritual.fr<br />
               Téléphone : +33 1 XX XX XX XX
             </p>
           </section>

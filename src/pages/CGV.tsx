@@ -25,7 +25,7 @@ const CGV = () => {
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Article 1 - Objet</h2>
             <p className="text-muted-foreground leading-relaxed">
               Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre 
-              Maître Abdou, marabout africain traditionnel, et toute personne physique souhaitant bénéficier 
+              Maître Amagnon Lissa, marabout africain traditionnel, et toute personne physique souhaitant bénéficier 
               de ses services de conseil et d'accompagnement spirituel.
             </p>
           </section>
@@ -33,7 +33,7 @@ const CGV = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Article 2 - Services proposés</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Maître Abdou propose des services de conseil spirituel basés sur les traditions africaines ancestrales, notamment :
+              Maître Amagnon Lissa propose des services de conseil spirituel basés sur les traditions africaines ancestrales, notamment :
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
               <li>Retour de l'être aimé et harmonie relationnelle</li>
@@ -92,7 +92,7 @@ const CGV = () => {
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Article 6 - Confidentialité</h2>
             <p className="text-muted-foreground leading-relaxed">
               Toutes les consultations et échanges sont couverts par le secret spirituel traditionnel. 
-              Maître Abdou s'engage à une confidentialité absolue concernant votre identité, vos confidences 
+              Maître Amagnon Lissa s'engage à une confidentialité absolue concernant votre identité, vos confidences 
               et votre situation personnelle.
             </p>
           </section>
@@ -108,7 +108,7 @@ const CGV = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Article 8 - Engagements et résultats</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Maître Abdou s'engage à mettre en œuvre toutes ses compétences et son expérience pour vous 
+              Maître Amagnon Lissa s'engage à mettre en œuvre toutes ses compétences et son expérience pour vous 
               accompagner au mieux. Cependant, les services proposés relèvent du domaine spirituel et de 
               l'accompagnement traditionnel. Les résultats peuvent varier selon les personnes et les situations.
             </p>
@@ -121,11 +121,11 @@ const CGV = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Article 9 - Responsabilité</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Le client reconnaît que les services de Maître Abdou constituent un accompagnement spirituel 
+              Le client reconnaît que les services de Maître Amagnon Lissa constituent un accompagnement spirituel 
               complémentaire et ne remplacent pas un suivi médical, psychologique ou juridique professionnel.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Maître Abdou ne pourra être tenu responsable des décisions prises par le client suite aux 
+              Maître Amagnon Lissa ne pourra être tenu responsable des décisions prises par le client suite aux 
               consultations spirituelles.
             </p>
           </section>
@@ -161,7 +161,7 @@ const CGV = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Article 13 - Modifications des CGV</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Maître Abdou se réserve le droit de modifier les présentes CGV à tout moment. Les CGV applicables 
+              Maître Amagnon Lissa se réserve le droit de modifier les présentes CGV à tout moment. Les CGV applicables 
               sont celles en vigueur à la date de la commande du service.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
@@ -175,7 +175,7 @@ const CGV = () => {
               Pour toute question concernant ces conditions générales de vente :
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Email : maitre.abdou@spiritual.fr<br />
+              Email : maitre.Amagnon Lissa@spiritual.fr<br />
               Téléphone : +33 1 XX XX XX XX
             </p>
           </section>
