@@ -5,14 +5,14 @@ const testimonials = [
   {
     name: "Marie D.",
     location: "Paris",
-    text: "Après 6 mois de séparation, mon mari est revenu grâce à Maître Abdou. Notre amour est plus fort que jamais !",
+    text: "Après 6 mois de séparation, mon mari est revenu grâce à Maître Amagnon Lissa. Notre amour est plus fort que jamais !",
     rating: 5,
     service: "Retour de l'être aimé"
   },
   {
     name: "Jean-Claude M.",
     location: "Lyon",
-    text: "J'ai obtenu la promotion que j'attendais depuis 3 ans. Les rituels de Maître Abdou sont d'une efficacité redoutable.",
+    text: "J'ai obtenu la promotion que j'attendais depuis 3 ans. Les rituels de Maître Amagnon Lissa sont d'une efficacité redoutable.",
     rating: 5,
     service: "Réussite professionnelle"
   },
@@ -40,7 +40,7 @@ const testimonials = [
   {
     name: "Thomas R.",
     location: "Nice",
-    text: "Résultats visibles en 48h comme promis. Maître Abdou est un véritable guide spirituel authentique.",
+    text: "Résultats visibles en 48h comme promis. Maître Amagnon Lissa est un véritable guide spirituel authentique.",
     rating: 5,
     service: "Résultats rapides"
   }

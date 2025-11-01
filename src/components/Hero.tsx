@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-golden-amber via-sunset-orange to-earth-red bg-clip-text text-transparent">
-                  Maître Abdou
+                  Maître Amagnon Lissa
                 </span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-desert-sand">
@@ -71,7 +71,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-sunset-orange to-golden-amber rounded-full blur-3xl opacity-20 animate-pulse"></div>
               <img 
                 src={heroImage} 
-                alt="Maître Abdou - Marabout Africain Traditionnel" 
+                alt="Maître Amagnon Lissa - Marabout Africain Traditionnel" 
                 className="relative z-10 w-full h-auto rounded-2xl shadow-2xl border-2 border-golden-amber/30"
               />
             </div>

@@ -53,7 +53,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-sunset-orange" />
-                <span className="text-muted-foreground">maitre.abdou@spiritual.fr</span>
+                <span className="text-muted-foreground">contact@marabout-lissa.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-sunset-orange" />

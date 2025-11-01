@@ -126,7 +126,7 @@ const Confidentialite = () => {
               vous pouvez nous contacter :
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Email : maitre.Amagnon Lissa@spiritual.fr<br />
+              Email : contact@marabout-lissa.com<br />
               Téléphone : +33 1 XX XX XX XX
             </p>
           </section>

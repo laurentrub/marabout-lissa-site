@@ -26,7 +26,7 @@ const MentionsLegales = () => {
             <p className="text-muted-foreground leading-relaxed">
               <strong>Nom :</strong> Maître Amagnon Lissa<br />
               <strong>Activité :</strong> Marabout africain traditionnel - Consultant spirituel<br />
-              <strong>Email :</strong> maitre.Amagnon Lissa@spiritual.fr<br />
+              <strong>Email :</strong> contact@marabout-lissa.com<br />
               <strong>Téléphone :</strong> +33 1 XX XX XX XX
             </p>
           </section>
@@ -34,8 +34,8 @@ const MentionsLegales = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Hébergement</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Ce site est hébergé par Lovable App<br />
-              Adresse : lovable.app
+              Ce site est hébergé par OVH<br />
+              Adresse : www.ovh.com
             </p>
           </section>
 

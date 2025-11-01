@@ -165,7 +165,7 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-sunset-orange mt-1" />
                   <div>
                     <div className="font-semibold">Email Privé</div>
-                    <div className="text-muted-foreground">maitre.abdou@spiritual.fr</div>
+                    <div className="text-muted-foreground">contact@marabout-lissa.com</div>
                     <div className="text-sm text-muted-foreground">Réponse sous 24h</div>
                   </div>
                 </div>

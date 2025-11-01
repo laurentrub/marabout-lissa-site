@@ -23,7 +23,7 @@ const Header = () => {
               <Star className="w-6 h-6 text-primary-foreground" />
             </div>
             <div className="text-xl font-bold bg-gradient-to-r from-golden-amber to-sunset-orange bg-clip-text text-transparent">
-              Maître Abdou
+              Maître Amagnon Lissa
             </div>
           </div>
 
