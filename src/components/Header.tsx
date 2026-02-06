@@ -1,9 +1,23 @@
-import { useState } from "react";
+ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Star } from "lucide-react";
+ import BookingModal from "@/components/BookingModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isBookingOpen, setIsBookingOpen] = useState(false);
+ 
+   // Listen for custom event to open booking modal
+   useEffect(() => {
+     const handleOpenBooking = (event: CustomEvent<{ service?: string }>) => {
+       setIsBookingOpen(true);
+     };
+     
+     window.addEventListener('openBookingModal', handleOpenBooking as EventListener);
+     return () => {
+       window.removeEventListener('openBookingModal', handleOpenBooking as EventListener);
+     };
+   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -59,7 +73,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button 
               variant="mystical" 
-              onClick={() => scrollToSection('contact')}
+               onClick={() => setIsBookingOpen(true)}
             >
               Consultation Gratuite
             </Button>
@@ -104,13 +118,21 @@ const Header = () => {
             <Button 
               variant="mystical" 
               className="w-full mt-4"
-              onClick={() => scrollToSection('contact')}
+               onClick={() => {
+                 setIsMenuOpen(false);
+                 setIsBookingOpen(true);
+               }}
             >
               Consultation Gratuite
             </Button>
           </div>
         )}
       </div>
+       
+       <BookingModal 
+         isOpen={isBookingOpen} 
+         onClose={() => setIsBookingOpen(false)} 
+       />
     </header>
   );
 };

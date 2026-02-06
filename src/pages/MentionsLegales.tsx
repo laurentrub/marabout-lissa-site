@@ -16,7 +16,7 @@ const MentionsLegales = () => {
           </Button>
         </Link>
 
-        <article className="max-w-4xl mx-auto prose prose-invert">
+        <article className="max-w-4xl mx-auto prose">
           <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-sunset-orange to-earth-red bg-clip-text text-transparent">
             Mentions Légales
           </h1>
@@ -27,15 +27,16 @@ const MentionsLegales = () => {
               <strong>Nom :</strong> Maître Amagnon Lissa<br />
               <strong>Activité :</strong> Marabout africain traditionnel - Consultant spirituel<br />
               <strong>Email :</strong> contact@marabout-lissa.com<br />
-              <strong>Téléphone :</strong> +33 1 XX XX XX XX
+              <strong>Téléphone :</strong> +33 644 66 81 73
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-golden-amber mb-4">Hébergement</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Ce site est hébergé par OVH<br />
-              Adresse : www.ovh.com
+              Ce site est hébergé par la société OVH SAS<br />
+              <strong>Adresse :</strong> 2 rue Kellermann, 59100 Roubaix, France<br />
+              <strong>Contact :</strong> <a href="https://www.ovh.com/fr/support/" target="_blank" rel="noopener noreferrer" className="text-golden-amber hover:underline">Support OVH</a> ou via le numéro de téléphone 1007
             </p>
           </section>
 

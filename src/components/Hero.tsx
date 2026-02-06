@@ -1,11 +1,22 @@
-import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/marabout-hero.jpg";
+ import { useState } from "react";
+ import { Button } from "@/components/ui/button";
+ import heroImage from "@/assets/marabout-hero.jpg";
+ import BookingModal from "@/components/BookingModal";
 
 const Hero = () => {
+   const [isBookingOpen, setIsBookingOpen] = useState(false);
+ 
+   const scrollToServices = () => {
+     const element = document.getElementById('services');
+     if (element) {
+       element.scrollIntoView({ behavior: 'smooth' });
+     }
+   };
+ 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with mystical gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-midnight-earth via-background to-midnight-earth"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Clean white/light background */}
+      <div className="absolute inset-0 bg-background"></div>
       
       {/* Floating spiritual elements */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-golden-amber rounded-full animate-float opacity-60"></div>
@@ -22,7 +33,7 @@ const Hero = () => {
                   Maître Amagnon Lissa
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-desert-sand">
+              <h2 className="text-2xl md:text-3xl text-muted-foreground">
                 Marabout Africain Traditionnel
               </h2>
             </div>
@@ -37,12 +48,14 @@ const Hero = () => {
                 variant="mystical" 
                 size="lg"
                 className="animate-glow"
+                 onClick={() => setIsBookingOpen(true)}
               >
                 Consultation Gratuite
               </Button>
               <Button 
                 variant="spiritual" 
                 size="lg"
+                 onClick={scrollToServices}
               >
                 Découvrir mes Services
               </Button>
@@ -78,6 +91,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+       
+       <BookingModal 
+         isOpen={isBookingOpen} 
+         onClose={() => setIsBookingOpen(false)} 
+       />
     </section>
   );
 };
