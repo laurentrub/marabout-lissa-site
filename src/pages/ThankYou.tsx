@@ -33,7 +33,7 @@ const ThankYou = () => {
                   Que se passe-t-il maintenant ?
                 </p>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>✓ Votre message sera examiné personnellement par Maître Amagnon Lissa</p>
+                  <p>✓ Votre message sera examiné personnellement par Maître Abdou</p>
                   <p>✓ Vous recevrez une réponse dans les <strong className="text-golden-amber">24 heures</strong></p>
                   <p>✓ La première consultation est <strong className="text-golden-amber">totalement gratuite</strong></p>
                 </div>
@@ -47,7 +47,7 @@ const ThankYou = () => {
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <div className="flex items-center gap-2 text-sunset-orange">
                     <Phone className="w-5 h-5" />
-                    <span className="font-semibold">+33 1 XX XX XX XX</span>
+                    <span className="font-semibold">+33 644 66 81 73</span>
                   </div>
                   <div className="flex items-center gap-2 text-sunset-orange">
                     <Mail className="w-5 h-5" />

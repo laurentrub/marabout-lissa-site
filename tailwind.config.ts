@@ -96,10 +96,10 @@ export default {
         },
         "glow": {
           "0%": {
-            "box-shadow": "0 0 20px hsl(var(--golden-amber) / 0.3)",
+            "box-shadow": "0 4px 15px hsl(var(--golden-amber) / 0.2)",
           },
           "100%": {
-            "box-shadow": "0 0 30px hsl(var(--sunset-orange) / 0.5)",
+            "box-shadow": "0 4px 20px hsl(var(--sunset-orange) / 0.3)",
           },
         },
       },

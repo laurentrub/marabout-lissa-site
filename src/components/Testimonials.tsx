@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, Youtube } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -45,6 +46,8 @@ const testimonials = [
     service: "Résultats rapides"
   }
 ];
+
+const youtubeChannelUrl = "https://www.youtube.com/@maitreamagnonlissa";
 
 const Testimonials = () => {
   return (
@@ -98,8 +101,26 @@ const Testimonials = () => {
           ))}
         </div>
         
+        {/* YouTube link */}
+        <div className="mt-12 text-center">
+          <a 
+            href={youtubeChannelUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-earth-red text-earth-red hover:bg-earth-red hover:text-white gap-2"
+            >
+              <Youtube className="w-5 h-5" />
+              Voir plus de témoignages sur YouTube
+            </Button>
+          </a>
+        </div>
+
         {/* Trust elements */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <div className="inline-flex items-center gap-4 px-6 py-3 bg-card border border-sunset-orange/30 rounded-full">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (

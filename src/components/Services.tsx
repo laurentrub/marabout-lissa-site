@@ -1,49 +1,65 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+ import { useState } from "react";
+ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Home, Briefcase, Shield, Star, Zap } from "lucide-react";
+ import BookingModal from "@/components/BookingModal";
 
 const services = [
   {
     icon: Heart,
     title: "Retour de l'Être Aimé",
     description: "Rituels puissants pour reconquérir votre âme sœur et rétablir l'harmonie dans votre couple.",
-    features: ["Retour rapide et efficace", "Protection contre la séparation", "Renforcement des liens amoureux"]
+     features: ["Retour rapide et efficace", "Protection contre la séparation", "Renforcement des liens amoureux"],
+     serviceType: "retour_affectif"
   },
   {
     icon: Home,
     title: "Harmonie Familiale",
     description: "Résolution des conflits familiaux et restauration de la paix dans votre foyer.",
-    features: ["Réconciliation familiale", "Protection du foyer", "Bénédictions ancestrales"]
+     features: ["Réconciliation familiale", "Protection du foyer", "Bénédictions ancestrales"],
+     serviceType: "spirituelle"
   },
   {
     icon: Briefcase,
     title: "Réussite Professionnelle",
     description: "Déblocage des situations professionnelles et ouverture des voies vers le succès.",
-    features: ["Promotion garantie", "Protection contre les ennemis", "Prospérité financière"]
+     features: ["Promotion garantie", "Protection contre les ennemis", "Prospérité financière"],
+     serviceType: "voyance"
   },
   {
     icon: Shield,
     title: "Protection Spirituelle",
     description: "Boucliers mystiques contre les énergies négatives et les sorts maléfiques.",
-    features: ["Désenvoûtement complet", "Protection permanente", "Purification spirituelle"]
+     features: ["Désenvoûtement complet", "Protection permanente", "Purification spirituelle"],
+     serviceType: "nettoyage"
   },
   {
     icon: Star,
     title: "Chance et Fortune",
     description: "Rituels de prospérité pour attirer l'abondance et la réussite dans votre vie.",
-    features: ["Multiplication des gains", "Ouverture des chemins", "Succès dans les projets"]
+     features: ["Multiplication des gains", "Ouverture des chemins", "Succès dans les projets"],
+     serviceType: "voyance"
   },
   {
     icon: Zap,
     title: "Résultats Rapides",
     description: "Solutions d'urgence pour les cas les plus complexes et les situations critiques.",
-    features: ["Résultats en 48h", "Satisfaction garantie", "Suivi personnalisé"]
+     features: ["Résultats en 48h", "Satisfaction garantie", "Suivi personnalisé"],
+     serviceType: "urgente"
   }
 ];
 
 const Services = () => {
+   const [isBookingOpen, setIsBookingOpen] = useState(false);
+   const [selectedService, setSelectedService] = useState("");
+ 
+   const handleServiceClick = (serviceType: string) => {
+     setSelectedService(serviceType);
+     setIsBookingOpen(true);
+   };
+ 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-card/50">
+     <section id="services" className="py-20 bg-gradient-to-b from-background to-card/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -86,6 +102,7 @@ const Services = () => {
                 <Button 
                   variant="spiritual" 
                   className="w-full mt-6"
+                   onClick={() => handleServiceClick(service.serviceType)}
                 >
                   Consulter Maintenant
                 </Button>
@@ -94,6 +111,12 @@ const Services = () => {
           ))}
         </div>
       </div>
+       
+       <BookingModal 
+         isOpen={isBookingOpen} 
+         onClose={() => setIsBookingOpen(false)}
+         preselectedService={selectedService}
+       />
     </section>
   );
 };
