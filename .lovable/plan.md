@@ -1,80 +1,55 @@
 
 
-# Refonte des couleurs : fond blanc, texte noir, touches de couleur
+## Repenser la section Services : images + texte
 
-## Objectif
-Passer du theme sombre actuel ("Terre et Mystere") a un theme clair avec :
-- Fond blanc
-- Texte noir
-- Des touches de couleur attrayantes (orange dore, ambre, rouge terre) pour les boutons, titres et accents
+### Objectif
+Remplacer les icones rondes par des images de rituels fournies par l'utilisateur, et adapter la mise en page des cartes pour mettre en valeur ces images.
 
-## Fichiers concernes (14 fichiers)
+### Nouvelle mise en page des cartes
 
-### 1. Variables CSS - `src/index.css`
-Le coeur du changement. Toutes les variables CSS seront reecrites pour un theme clair :
-- `--background` : blanc pur (0 0% 100%)
-- `--foreground` : noir/gris tres fonce (0 0% 10%)
-- `--card` : gris tres clair pour les cartes
-- `--muted` : gris clair pour les zones secondaires
-- `--border` : gris clair pour les bordures
-- Les couleurs d'accent (sunset-orange, golden-amber, earth-red) sont conservees pour donner de la vie au site
-- `--primary` et `--accent` restent dans les tons chauds (orange/ambre)
-- Suppression du bloc `.dark` devenu inutile
+Chaque carte de service passera d'un format "icone ronde + texte centre" a un format "image en haut + texte en dessous" :
 
-### 2. Animations Tailwind - `tailwind.config.ts`
-- Mise a jour des animations `glow` pour qu'elles soient visibles sur fond blanc (ombres plus subtiles)
+```text
++---------------------------+
+|                           |
+|     [Image du rituel]     |
+|     (aspect-ratio 4:3,    |
+|      coins arrondis)      |
+|                           |
++---------------------------+
+|  Titre du service         |
+|  Description              |
+|  - Feature 1              |
+|  - Feature 2              |
+|  - Feature 3              |
+|  [Bouton Consulter]       |
++---------------------------+
+```
 
-### 3. Boutons - `src/components/ui/button.tsx`
-- Variante `mystical` : garder le degrade orange/rouge avec texte blanc
-- Variante `spiritual` : adapter pour fond clair (bordure coloree, fond transparent, texte sombre)
+La grille reste 1 colonne sur mobile, 2 sur tablette, 3 sur desktop.
 
-### 4. Header - `src/components/Header.tsx`
-- Fond blanc semi-transparent avec backdrop-blur
-- Liens en noir, hover en orange
-- Logo degrade orange/ambre conserve
+### Modifications
 
-### 5. Hero - `src/components/Hero.tsx`
-- Fond blanc
-- Sous-titre en gris fonce au lieu de `desert-sand`
-- Statistiques en couleur d'accent conservees
+**1. Copier l'image fournie dans le projet**
+- Copier `user-uploads://Retour….jpeg` vers `src/assets/service-retour-aime.jpeg`
 
-### 6. Services - `src/components/Services.tsx`
-- Cartes sur fond blanc/gris tres clair
-- Titres en couleur d'accent
-- Points de liste en orange
+**2. Modifier `src/components/Services.tsx`**
+- Ajouter un champ `image` dans chaque objet du tableau `services`
+- Pour "Retour de l'Etre Aime" : utiliser l'image fournie (import depuis `@/assets/service-retour-aime.jpeg`)
+- Pour les 5 autres services : utiliser une image placeholder temporaire (`/placeholder.svg`) en attendant que l'utilisateur fournisse les photos
+- Remplacer le bloc icone ronde par un composant `<img>` avec :
+  - `aspect-ratio` via la classe Tailwind `aspect-[4/3]`
+  - `object-cover` pour un recadrage propre
+  - Coins arrondis en haut de la carte (`rounded-t-lg`)
+- Retirer le padding du `CardHeader` en haut pour que l'image soit bord a bord
+- Conserver le reste du contenu (titre, description, features, bouton)
 
-### 7. Temoignages - `src/components/Testimonials.tsx`
-- Cartes sur fond blanc
-- Etoiles dorees conservees
-- Badges en orange clair
+### Ce qui ne change pas
+- Le contenu textuel (titres, descriptions, features)
+- La logique de reservation (BookingModal)
+- Les animations hover sur les cartes
+- La grille responsive
 
-### 8. Contact - `src/components/Contact.tsx`
-- Formulaire sur fond blanc avec bordures grises
-- Champs de saisie avec bordures claires
-- Icones colorees conservees
-
-### 9. Footer - `src/components/Footer.tsx`
-- Le footer reste sombre (fond fonce) pour le contraste
-- Texte blanc/gris clair
-- Accents orange conserves
-
-### 10. Page Merci - `src/pages/ThankYou.tsx`
-- Fond blanc, texte noir
-- Accents colores conserves
-
-### 11-13. Pages legales - `src/pages/MentionsLegales.tsx`, `Confidentialite.tsx`, `CGV.tsx`
-- Suppression de `prose-invert` (passage en prose clair)
-- Titres en couleur d'accent
-- Texte en gris fonce
-
-### 14. Admin Dashboard - `src/components/admin/AdminDashboard.tsx`
-- Adaptation automatique via les variables CSS (pas de changement de code necessaire)
-
-## Details techniques
-
-Les changements principaux sont concentres dans `src/index.css` (variables CSS). La plupart des composants utilisent les classes Tailwind semantiques (`bg-background`, `text-foreground`, `bg-card`, etc.) qui s'adapteront automatiquement.
-
-Les references directes aux couleurs custom (`text-golden-amber`, `text-sunset-orange`, `border-earth-red`, etc.) seront conservees car ces couleurs d'accent restent dans la palette.
-
-Le footer conservera un fond sombre pour creer un beau contraste en bas de page.
+### Prochaines etapes (apres validation)
+L'utilisateur pourra fournir les images pour les 5 autres services et elles seront integrees de la meme maniere.
 

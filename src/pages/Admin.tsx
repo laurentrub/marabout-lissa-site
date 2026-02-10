@@ -16,6 +16,7 @@ const Admin = () => {
       (event, session) => {
         setUser(session?.user ?? null);
         if (session?.user) {
+          setLoading(true);
           setTimeout(() => {
             checkAdminRole(session.user.id);
           }, 0);
@@ -69,8 +70,11 @@ const Admin = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      <div className="min-h-screen bg-background flex items-center justify-center animate-fade-in">
+        <div className="flex flex-col items-center gap-4">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+          <p className="text-sm text-muted-foreground animate-pulse">Chargement...</p>
+        </div>
       </div>
     );
   }

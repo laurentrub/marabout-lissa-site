@@ -180,7 +180,7 @@ const AdminDashboard = ({ user, onLogout }: AdminDashboardProps) => {
   });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       <header className="border-b border-border/50 bg-card/50 backdrop-blur sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-xl font-bold text-foreground">
@@ -200,7 +200,7 @@ const AdminDashboard = ({ user, onLogout }: AdminDashboardProps) => {
 
       <main className="container mx-auto px-4 py-8">
         {/* Stats Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" style={{ animation: "fade-in 0.5s ease-out 0.1s both" }}>
           <Card className="bg-card/50 border-border/50">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm text-muted-foreground">Total</CardTitle>
@@ -236,7 +236,7 @@ const AdminDashboard = ({ user, onLogout }: AdminDashboardProps) => {
         </div>
 
         {/* Bookings Table */}
-        <Card className="bg-card/50 border-border/50">
+        <Card className="bg-card/50 border-border/50" style={{ animation: "fade-in 0.5s ease-out 0.3s both" }}>
           <CardHeader className="space-y-4">
             <div className="flex flex-row items-center justify-between">
               <CardTitle>Liste des réservations</CardTitle>
