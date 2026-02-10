@@ -1,51 +1,56 @@
- import { useState } from "react";
- import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Home, Briefcase, Shield, Star, Zap } from "lucide-react";
- import BookingModal from "@/components/BookingModal";
+import BookingModal from "@/components/BookingModal";
+import serviceRetourAime from "@/assets/service-retour-aime.jpeg";
+import serviceHarmonieFamiliale from "@/assets/service-harmonie-familiale.jpeg";
+import serviceReussitePro from "@/assets/service-reussite-pro.jpeg";
+import serviceProtectionSpirituelle from "@/assets/service-protection-spirituelle.jpeg";
+import serviceChanceFortune from "@/assets/service-chance-fortune.jpeg";
+import serviceResultatsRapides from "@/assets/service-resultats-rapides.jpeg";
 
 const services = [
   {
-    icon: Heart,
+    image: serviceRetourAime,
     title: "Retour de l'Être Aimé",
     description: "Rituels puissants pour reconquérir votre âme sœur et rétablir l'harmonie dans votre couple.",
-     features: ["Retour rapide et efficace", "Protection contre la séparation", "Renforcement des liens amoureux"],
-     serviceType: "retour_affectif"
+    features: ["Retour rapide et efficace", "Protection contre la séparation", "Renforcement des liens amoureux"],
+    serviceType: "retour_affectif"
   },
   {
-    icon: Home,
+    image: serviceHarmonieFamiliale,
     title: "Harmonie Familiale",
     description: "Résolution des conflits familiaux et restauration de la paix dans votre foyer.",
-     features: ["Réconciliation familiale", "Protection du foyer", "Bénédictions ancestrales"],
-     serviceType: "spirituelle"
+    features: ["Réconciliation familiale", "Protection du foyer", "Bénédictions ancestrales"],
+    serviceType: "spirituelle"
   },
   {
-    icon: Briefcase,
+    image: serviceReussitePro,
     title: "Réussite Professionnelle",
     description: "Déblocage des situations professionnelles et ouverture des voies vers le succès.",
-     features: ["Promotion garantie", "Protection contre les ennemis", "Prospérité financière"],
-     serviceType: "voyance"
+    features: ["Promotion garantie", "Protection contre les ennemis", "Prospérité financière"],
+    serviceType: "voyance"
   },
   {
-    icon: Shield,
+    image: serviceProtectionSpirituelle,
     title: "Protection Spirituelle",
     description: "Boucliers mystiques contre les énergies négatives et les sorts maléfiques.",
-     features: ["Désenvoûtement complet", "Protection permanente", "Purification spirituelle"],
-     serviceType: "nettoyage"
+    features: ["Désenvoûtement complet", "Protection permanente", "Purification spirituelle"],
+    serviceType: "nettoyage"
   },
   {
-    icon: Star,
+    image: serviceChanceFortune,
     title: "Chance et Fortune",
     description: "Rituels de prospérité pour attirer l'abondance et la réussite dans votre vie.",
-     features: ["Multiplication des gains", "Ouverture des chemins", "Succès dans les projets"],
-     serviceType: "voyance"
+    features: ["Multiplication des gains", "Ouverture des chemins", "Succès dans les projets"],
+    serviceType: "voyance"
   },
   {
-    icon: Zap,
+    image: serviceResultatsRapides,
     title: "Résultats Rapides",
     description: "Solutions d'urgence pour les cas les plus complexes et les situations critiques.",
-     features: ["Résultats en 48h", "Satisfaction garantie", "Suivi personnalisé"],
-     serviceType: "urgente"
+    features: ["Résultats en 48h", "Satisfaction garantie", "Suivi personnalisé"],
+    serviceType: "urgente"
   }
 ];
 
@@ -77,18 +82,20 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-mystical transition-all duration-300 hover:-translate-y-2 border-sunset-orange/20 hover:border-sunset-orange/50"
+              className="group hover:shadow-mystical transition-all duration-300 hover:-translate-y-2 border-sunset-orange/20 hover:border-sunset-orange/50 overflow-hidden"
             >
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-sunset-orange to-golden-amber rounded-full flex items-center justify-center group-hover:animate-glow">
-                  <service.icon className="w-8 h-8 text-primary-foreground" />
-                </div>
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-6 space-y-4">
                 <CardTitle className="text-xl text-golden-amber group-hover:text-sunset-orange transition-colors">
                   {service.title}
                 </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CardDescription className="text-center leading-relaxed">
+                <CardDescription className="leading-relaxed">
                   {service.description}
                 </CardDescription>
                 <ul className="space-y-2">
