@@ -27,7 +27,7 @@ const MentionsLegales = () => {
               <strong>Nom :</strong> Maître Amagnon Lissa<br />
               <strong>Activité :</strong> Marabout africain traditionnel - Consultant spirituel<br />
               <strong>Email :</strong> contact@marabout-lissa.com<br />
-              <strong>Téléphone :</strong> +33 644 66 81 73
+              <strong>Téléphone :</strong> 07 57 75 27 52
             </p>
           </section>
 

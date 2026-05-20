@@ -47,7 +47,7 @@ const ThankYou = () => {
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <div className="flex items-center gap-2 text-sunset-orange">
                     <Phone className="w-5 h-5" />
-                    <span className="font-semibold">+33 644 66 81 73</span>
+                    <span className="font-semibold">07 57 75 27 52</span>
                   </div>
                   <div className="flex items-center gap-2 text-sunset-orange">
                     <Mail className="w-5 h-5" />

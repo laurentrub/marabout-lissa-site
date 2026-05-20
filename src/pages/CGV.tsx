@@ -176,7 +176,7 @@ const CGV = () => {
             <p className="text-muted-foreground leading-relaxed mt-4">
               Email : contact@marabout-lissa.com
               <br />
-              Téléphone : +33 6 44 66 81 73
+              Téléphone : 07 57 75 27 52
             </p>
           </section>
         </article>

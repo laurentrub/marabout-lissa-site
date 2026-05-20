@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
-const PHONE_NUMBER = "33644668173";
+const PHONE_NUMBER = "33757752752";
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}`;
 
 const WhatsAppButton = () => {

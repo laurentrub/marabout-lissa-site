@@ -156,7 +156,7 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-sunset-orange mt-1" />
                   <div>
                     <div className="font-semibold">Consultation Téléphonique</div>
-                    <div className="text-muted-foreground">+33 644 66 81 73</div>
+                    <div className="text-muted-foreground">07 57 75 27 52</div>
                     <div className="text-sm text-muted-foreground">Disponible 7j/7</div>
                   </div>
                 </div>
