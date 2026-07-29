@@ -1,9 +1,6 @@
-name: Deploy static site to Asura via FTP
+name: Deploy static site to Asura via FTP (disabled, superseded by Vercel)
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
